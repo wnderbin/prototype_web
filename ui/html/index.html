@@ -1,0 +1,17 @@
+{{ template "layout" . }}
+
+{{ define "title" }} {{ .Title }} {{ end }}
+
+{{ define "style" }} <link rel="stylesheet" type="text/css" href="../static/index.css"> {{ end }}
+
+{{ define "source" }}
+
+    <h1 align="center"> {{ .Header }} </h1>
+    <p align="center"> {{ .Description }} </p>
+    <h4 align="center"> Web-site languages: </h4>
+
+    {{ range $l := .Data }}
+        <p align="center"> {{ $l }} </p>
+    {{ end }}
+
+{{ end }}
